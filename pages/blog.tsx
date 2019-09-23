@@ -29,7 +29,7 @@ const Index: NextPage<{ data }> = (data) => {
         </div>
         {
         newData.map(element => (
-            <div style={styleContent} key={element[1].id}>
+            <div style={styleContent}>
             <div>{element[1].date}</div>
             <img height="100" width="100" src={`https://upply-interview.herokuapp.com/images/${element[1].src}`} />
             <div>{element[1].title}</div>
