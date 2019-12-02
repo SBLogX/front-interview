@@ -86,8 +86,6 @@ Blog.getInitialProps = async function() {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(Date.parse('2016-03-01T12:00'))
-
     return {
         posts: data.map(post => post).sort(sortDate)
     };
