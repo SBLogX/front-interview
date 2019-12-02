@@ -50,14 +50,17 @@ const Footer = ({
 }) => (
     <Wrapper>
 		<Title>
-			<h3>{title}</h3>
-			<span>{date}</span>
+			{title && <h3>{title}</h3>}
+			{date && <span>{date}</span>}
 		</Title>
-		<img
-			src={`https://upply-interview.herokuapp.com/images/${src}`}
-			alt={title}
-		/>
-		<p>{text}</p>
+		{
+			src && 
+			<img
+				src={`https://upply-interview.herokuapp.com/images/${src}`}
+				alt={title}
+			/>
+		}
+		{text && <p>{text}</p>}
     </Wrapper>
 );
 
